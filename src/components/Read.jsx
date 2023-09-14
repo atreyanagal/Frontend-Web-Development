@@ -11,7 +11,7 @@ const Read = () => {
         backgroundColor: 'white'
     })
 
-    const [setBtnText] = useState("Enable Dark Mode");
+    // const [setBtnText] = useState("Enable Dark Mode");
 
     const toggleStyle = () => {
         if (myStyle.color === '#121212') {
@@ -19,20 +19,20 @@ const Read = () => {
                 color: 'white',
                 backgroundColor: '#121212'
             })
-            setBtnText("Enable Light Mode");
+            // setBtnText("Enable Light Mode");
         }
         else {
             setMyStyle({
                 color: '#121212',
                 backgroundColor: 'white'
             });
-            setBtnText("Enable Dark Mode");
+            // setBtnText("Enable Dark Mode");
         }
     }
 
     async function getData() {
 
-        const response = await fetch("http://localhost:5000");
+        const response = await fetch("https://nodebackend1.onrender.com");
 
         const result = await response.json();
 
@@ -48,7 +48,7 @@ const Read = () => {
 
     const handleDelete = async (id) => {
 
-        const response = await fetch(`http://localhost:5000/${id}`,
+        const response = await fetch(`https://nodebackend1.onrender.com/${id}`,
             {
                 method: "DELETE"
             });
