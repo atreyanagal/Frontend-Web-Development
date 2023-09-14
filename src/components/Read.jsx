@@ -118,9 +118,19 @@ const Read = () => {
                                         marginRight: "4px",
                                         pointerEvents: localStorage.getItem("email") === ele.email ? '' : 'none'
                                     }} className="btn btn-primary">Edit</Link>
-                                    <a href="#" className="btn btn-primary" onClick={() => handleDelete(ele._id)}
-                                        style={{ pointerEvents: localStorage.getItem("email") === ele.email ? '' : 'none' }}
-                                    >Delete</a>
+                                    <button
+                                        className="btn btn-primary"
+                                        onClick={() => handleDelete(ele._id)}
+                                        style={{
+                                            pointerEvents:
+                                                localStorage.getItem("email") === ele.email ? "" : "none",
+                                            // Add an underline to make it look like a link
+                                            cursor: "pointer", // Change the cursor to a pointer on hover
+                                        }}
+                                    >
+                                        Delete
+                                    </button>
+
                                 </div>
                             </div>
                         </div>
